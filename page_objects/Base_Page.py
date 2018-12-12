@@ -37,10 +37,10 @@ class Base_Page(Borg,unittest.TestCase):
     def register_driver(self,os_name,os_version,device_name,app_package,app_activity,app_path):
         self.driver = self.driver_obj.mobile_driver(os_name,os_version,device_name,app_package,app_activity,app_path)
 
-    def click_element(self,locator):
-        element = self.driver.find_element_by_xpath(locator)
+    def click_element(self,type,locator):
+        element = self.driver.find_element(type,locator)
         element.click()
 
-    def Edit_elment(self,locator,text):
-        element = self.driver.find_element_by_xpath(locator)
+    def Edit_elment(self,type,locator,text):
+        element = self.driver.find_element(type,locator)
         element.send_keys(text)

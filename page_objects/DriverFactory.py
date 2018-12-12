@@ -14,8 +14,10 @@ class DriverFactory():
         desired_capabilities['appPackage'] = app_package
         desired_capabilities['appActivity'] = app_activity
         desired_capabilities['app'] = app_path
+        desired_capabilities['automationName'] = 'UiAutomator2'
+        desired_capabilities['noReset'] = True
 
         driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_capabilities)
-        time.sleep(10)
+        time.sleep(5)
         return driver
 

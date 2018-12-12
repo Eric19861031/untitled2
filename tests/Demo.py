@@ -8,7 +8,7 @@ APPPATH = lambda p: os.path.abspath(os.path.join(os.path.dirname(__file__), p))
 def framework_test(os_name,os_version,device_name,app_package,app_activity,app_path):
     test_object = PageFactory.get_page_object("leaf_login_page")
     test_object.register_driver(os_name,os_version,device_name,app_package,app_activity,app_path)
-    test_object.login_opt("96009900","aa123456")
+    test_object.login_opt('96009900','aa123456')
 
 if __name__ == '__main__':
     framework_test("android",
